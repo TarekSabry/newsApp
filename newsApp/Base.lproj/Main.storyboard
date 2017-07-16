@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dg-aL-ciG">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="General" image="ic_language" id="eRY-GQ-yid"/>
+                                    <tabBarItem tag="1" title="Economy" image="ic_attach_money" id="k3s-NG-uCs"/>
+                                    <tabBarItem tag="2" title="Sports" image="icons8-Soccer Filled_24" id="1TM-W2-gQT"/>
+                                    <tabBarItem tag="3" title="Technology" image="ic_computer" id="1pa-Rz-Fzm"/>
+                                    <tabBarItem tag="4" title="Science" image="test-tube" id="Qv0-0x-OFm"/>
+                                    <tabBarItem tag="5" title="Gaming" image="ic_videogame_asset" id="Fef-xS-N64"/>
+                                </items>
+                            </tabBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="psa-hF-4QX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="fDu-8r-6nX"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="154" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CP3-Zx-UrJ">
+                                <rect key="frame" x="0.0" y="128" width="375" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="154" id="Qga-dT-05Q" customClass="NewsCell" customModule="newsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="154"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qga-dT-05Q" id="kQx-H0-1ZH">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="153.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eP4-Oz-WNf">
+                                                    <rect key="frame" x="8" y="8" width="107" height="132"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Article Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0L-TV-KeX">
+                                                    <rect key="frame" x="123" y="8" width="211" height="84"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Source :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-eR-Zn9">
+                                                    <rect key="frame" x="123" y="119" width="63" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Published At :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxw-bm-XUS">
+                                                    <rect key="frame" x="123" y="94" width="106" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017-07-25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hK-xT-Quc">
+                                                    <rect key="frame" x="237" y="94" width="111" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Next Web" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3c-YH-p1i">
+                                                    <rect key="frame" x="194" y="119" width="140" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleImage" destination="eP4-Oz-WNf" id="gb7-o6-NuK"/>
+                                            <outlet property="newsTitle" destination="E0L-TV-KeX" id="SzJ-as-ccU"/>
+                                            <outlet property="publishedAt" destination="9hK-xT-Quc" id="W2Z-7I-7Lt"/>
+                                            <outlet property="source" destination="X3c-YH-p1i" id="nie-nj-xQu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4dg-aL-ciG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="06i-46-DhQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4dg-aL-ciG" secondAttribute="bottom" id="1ez-my-Kfd"/>
+                            <constraint firstAttribute="trailing" secondItem="4dg-aL-ciG" secondAttribute="trailing" id="23B-4E-0tb"/>
+                            <constraint firstAttribute="trailing" secondItem="CP3-Zx-UrJ" secondAttribute="trailing" id="88f-Zb-WOV"/>
+                            <constraint firstItem="CP3-Zx-UrJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9dJ-3j-Nol"/>
+                            <constraint firstItem="psa-hF-4QX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KMK-X6-UcL"/>
+                            <constraint firstItem="4dg-aL-ciG" firstAttribute="top" secondItem="CP3-Zx-UrJ" secondAttribute="bottom" id="Rwt-ao-d7z"/>
+                            <constraint firstItem="psa-hF-4QX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VPM-dG-7aR"/>
+                            <constraint firstItem="CP3-Zx-UrJ" firstAttribute="top" secondItem="psa-hF-4QX" secondAttribute="bottom" id="ZzC-yS-CRF"/>
+                            <constraint firstAttribute="trailing" secondItem="psa-hF-4QX" secondAttribute="trailing" id="cXU-Zd-sq5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsTabBar" destination="4dg-aL-ciG" id="3BS-fB-dun"/>
+                        <outlet property="newsTableView" destination="CP3-Zx-UrJ" id="0ID-md-72k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="header" width="1790" height="650"/>
+        <image name="ic_attach_money" width="24" height="24"/>
+        <image name="ic_computer" width="24" height="24"/>
+        <image name="ic_language" width="24" height="24"/>
+        <image name="ic_videogame_asset" width="24" height="24"/>
+        <image name="icons8-Soccer Filled_24" width="24" height="24"/>
+        <image name="test-tube" width="24" height="24"/>
+    </resources>
+</document>
